@@ -32,52 +32,36 @@
   <title>Flask Web </title>
 </head>
 <body>
+      {% include "nav.html" %}
+  
       <div class="header-container">
         <h1  >Eklavya AI</h1>
         <img class=".img-fluid" id="banner"src="https://837654cd-db67-4994-b72d-d2d31717e481-00-3gufr5nzd1ff9.janeway.replit.dev/static/banner.jpg"  >
         </div>
     <div class=".container">
         <h2 class="text-center mt-2 mb-4"">About Eklavya AI</h2>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-6">
         <p class="lead">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+        </div>
+         <div class='col-6'>
+           <img src="/static/people.jpg" style="height:280px;width:400px; border-radius:4px;">
+         </div>
+      </div>
         <!-- CAREERS PAGE   -->
       <h2 class="text-center mt-2 mb-4"">Careers</h2>
       <div>
         {% for job in jobs %}
           {% include 'jobitem.html' %}
         {% endfor %}
-      </div>
-
-      <!-- <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" type="button" class="btn btn-dark">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">AI Engineer</h5>
-              <p class="card-text"> fgdfbdsbd</p>
-              <a href="#" type="button" class="btn btn-dark">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-     
-      <!-- Contact Us -->
-
+      </div>     
       
       <div class="text-center">
       <button type="button" class="btn btn-dark mt-3 mb-4">Contact Us</button>
-        <p class="text-center mt-3  mb-4">COPYRIGHT 2024,EKLAVYA AI</p>
       </div>
+      {%include 'footer.html' %}
     </div>
 </body>
 </html>
